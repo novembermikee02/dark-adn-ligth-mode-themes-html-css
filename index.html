@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark and Light Themes - Webiyor</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="section full-height over-hide">
+        <div class="switch-wrap">
+            <h1><span>Dark</span> Or <span>Light</span> Themes</h1>
+            <div id="switch" class="hover-target">
+                <div id="circle"></div>
+            </div>
+            <p><span>dark</span> - <span>light</span> </p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $("#switch").on('click', function () {
+                if ($("body").hasClass("light")) {
+                    $("body").removeClass("light");
+                    $("#switch").removeClass("switched");
+                }
+                else {
+                    $("body").addClass("light");
+                    $("#switch").addClass("switched");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
